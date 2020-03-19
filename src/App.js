@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
-import Home from "./components/pages/Home";
-import Top from "./components/pages/Top";
-import Genres from "./components/pages/Genres";
-import Authors from "./components/pages/Authors";
+import Home from "./components/_pages/Home";
+import Top from "./components/_pages/Top";
+import Genres from "./components/_pages/Genres";
+import Authors from "./components/_pages/Authors";
 
 const App = () => {
   return (

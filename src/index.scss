@@ -1,5 +1,5 @@
 body {
-  font-family: "Proxima Nova";
+  font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
   line-height: 1.2;
   margin: 0;
@@ -92,6 +92,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   border-style: none;
 }
 

@@ -1,0 +1,49 @@
+.card {
+  position: relative;
+  display: block;
+  width: 22%;
+  margin: 15px 1.5%;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cardMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  transform: translateY(100%);
+  transition: all 0.3s ease-in;
+  
+  p {
+    text-align: center;
+  }
+}
+
+.cardOpen .cardMore {
+  transform: translateY(0);
+}
+
+.cardTitle {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
