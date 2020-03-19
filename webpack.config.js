@@ -45,14 +45,14 @@ module.exports = {
       {
         test: /\.(css)$/,
         exclude: /static\/.*\.(css)$/,
-        use: [ MiniCssExtractPlugin.loader, "css-loader" ]
+        use: [ MiniCssExtractPlugin.loader, {loader: "css-loader", options: {modules: {localIdentName: '[local]__[hash:base64:5]'}}} ]
       },
 
 
       // SCSS/SASS
       {
         test: /\.(s[ca]ss)$/,
-        use: [ MiniCssExtractPlugin.loader,"css-loader", "sass-loader"]
+        use: [ MiniCssExtractPlugin.loader, {loader: "css-loader", options: {modules: {localIdentName: '[local]__[hash:base64:5]'}}}, "sass-loader"]
       },
 
       // IMG
