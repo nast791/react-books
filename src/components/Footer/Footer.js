@@ -13,7 +13,7 @@ const Footer = () => {
     <section className={cls.footer} style={{'backgroundImage': `url(${ImageBooks})`}}>
       <div className={cls.footerWrapper}>
         <Container>
-          <button className={cls.footerButton} onClick={scrollTop} style={{'backgroundImage': `url(${ImageArrow})`}} type="button"/>
+          <button className={cls.footerButton} onClick={scrollTop} style={{'backgroundImage': `url(${ImageArrow})`}} type="button" title="Наверх"/>
           <Logo/>
           <p className={cls.footerCopyright}>Copyright (c) 2020</p>
           <p>Все права защищены.</p>
