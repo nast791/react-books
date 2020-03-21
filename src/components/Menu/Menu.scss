@@ -1,0 +1,32 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 200px;
+  padding: 20px 10px;
+  background-color: #FFFFFF;
+  transform: translateX(0);
+  transition: all 0.22s ease-in;
+  z-index: 90;
+
+  li {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+.menuClose {
+  transform: translateX(200px);
+}
+
+.menuActiveLink {
+  cursor: default;
+  color: #2c98a8;
+
+  &:hover {
+    opacity: 1;
+    color: #2c98a8;
+  }
+}

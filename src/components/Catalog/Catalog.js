@@ -16,9 +16,10 @@ const Catalog = () => {
 
   const renderCards = () => {
     return [...Object.keys(data)].reverse().map((it) => {
-      return [...data[it]].reverse().map((item, index) => {
+      return [...data[it]].reverse().map((item) => {
+        const rate = item.voted ? (item.voted.reduce((acc, next) => acc + next) / item.voted.length).toFixed(1) : (0).toFixed(1);
         return (
-          <Card title={item.title} image={item.poster} author={item.author} key={index}/>
+          <Card title={item.title} image={item.poster} author={item.author} rate={rate} id={item.id} key={item.id}/>
         );
       });
     });

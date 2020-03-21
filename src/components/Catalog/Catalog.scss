@@ -1,10 +1,11 @@
 .catalog {
   width: 100%;
+  flex-grow: 1;
 }
 
 .catalogList {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -1.5%;
-  padding: 60px 0;
+  padding: 50px 0 60px;
 }

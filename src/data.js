@@ -1,7 +1,7 @@
 export const data = {
   20200316: [
     {
-      id: 1,
+      id: 202003161,
       link: 'https://drive.google.com/uc?export=view&id=1HFhamQNTNGW0z-VrUhAV0FzBo2NufyeF',
       poster: 'https://drive.google.com/uc?export=view&id=1cM7ingoMlY5BxLe8R4ZkNnNdiyZnK8_v',
       author: 'Анджей Сапковский',
@@ -14,7 +14,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 2,
+      id: 202003162,
       link: 'https://drive.google.com/uc?export=view&id=1ISOvBOQgVgEYzCTUexXs80sGi1N1f2QV',
       poster: 'https://drive.google.com/uc?export=view&id=1IJWOgD_LuxHvfnh3ZHibkZljhTHB2_GE',
       author: 'Анджей Сапковский',
@@ -27,7 +27,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 3,
+      id: 202003163,
       link: 'https://drive.google.com/uc?export=view&id=1RF8U8QWnEhZH2HyjFS9fOK20D1-NJsfX',
       poster: 'https://drive.google.com/uc?export=view&id=1Je3ZAgolQwPwcB20yrAB3Gtlcjspoq01',
       author: 'Анджей Сапковский',
@@ -43,7 +43,7 @@ export const data = {
   ],
   20200317: [
     {
-      id: 1,
+      id: 202003171,
       link: 'https://drive.google.com/uc?export=view&id=1s6m8l-OkQq-NlxDvTSXzfT0kTb4UUyfd',
       poster: 'https://drive.google.com/uc?export=view&id=1ZljRFo2qES77zGbnflyT0yPkrUJC5nFO',
       author: 'Анджей Сапковский',
@@ -56,7 +56,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 2,
+      id: 202003172,
       link: 'https://drive.google.com/uc?export=view&id=1eAtWzsimdBSCy7UeAOaUt-rq4nQKOin6',
       poster: 'https://drive.google.com/uc?export=view&id=17tN4xNc08a0UuJKOTfVzkjYgGX6rMz1u',
       author: 'Анджей Сапковский',
@@ -71,7 +71,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 3,
+      id: 202003173,
       link: 'https://drive.google.com/uc?export=view&id=1hmj8jlRVPbOu9jom2b2NYC9ndXWQmcRH',
       poster: 'https://drive.google.com/uc?export=view&id=16yq4jZ2bMkXwgGUvmQxOC_SajvB8VQAe',
       author: 'Анджей Сапковский',
@@ -84,7 +84,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 4,
+      id: 202003174,
       link: 'https://drive.google.com/uc?export=view&id=1Y_1Xb72WNkvQyDZkTw-Tr6Jpc2ZA_u87',
       poster: 'https://drive.google.com/uc?export=view&id=16TvxLazJMWscP_-RlGxm8dkt8pMc8ylP',
       author: 'Анджей Сапковский',
@@ -99,7 +99,7 @@ export const data = {
   ],
   20200318: [
     {
-      id: 1,
+      id: 202003181,
       link: 'https://drive.google.com/uc?export=view&id=1SFhvjxdT-l81oik7CTvd0N3d1dXBrLZs',
       poster: 'https://drive.google.com/uc?export=view&id=1lQWtQFK1ENQsxAJR6eBQwxqcfXBltpMP',
       author: 'Сергей Тармашев',
@@ -113,7 +113,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 2,
+      id: 202003182,
       link: 'https://drive.google.com/uc?export=view&id=13sStytFcd9rXCTSWhpOfDXTa5tTL4Csy',
       poster: 'https://drive.google.com/uc?export=view&id=1O5TyXUxhZF_ys7bJj-uHzPYQTqco7pXy',
       author: 'Сергей Тармашев',
@@ -126,7 +126,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 3,
+      id: 202003183,
       link: 'https://drive.google.com/uc?export=view&id=0BwHA7pKrbPtBSHF5Snk0WTlqZnM',
       poster: 'https://drive.google.com/uc?export=view&id=1jz2liSasMBfZoubqw4FGjKGHRuQLXwPr',
       author: 'Сергей Тармашев',
@@ -139,7 +139,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 4,
+      id: 202003184,
       link: 'https://drive.google.com/uc?export=view&id=0BwHA7pKrbPtBWWpUTTNJTFlvbGs',
       poster: 'https://drive.google.com/uc?export=view&id=1tkXuZSvoTki9ZMLMcgEeXbeard7LN2O1',
       author: 'Сергей Тармашев',
@@ -153,7 +153,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 5,
+      id: 202003185,
       link: 'https://drive.google.com/uc?export=view&id=0BwHA7pKrbPtBcWt4MWZyRHFOdTQ',
       poster: 'https://drive.google.com/uc?export=view&id=1yTyVpcJ0RRPeSFdW5kJQ6ZaWvEtMqR8n',
       author: 'Сергей Тармашев',
@@ -166,7 +166,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 6,
+      id: 202003186,
       link: 'https://drive.google.com/uc?export=view&id=0BwHA7pKrbPtBdXZ2SHU2eV9sbjQ',
       poster: 'https://drive.google.com/uc?export=view&id=1dKBrhScoiAG1M2uyrHVrsCihldupYWaB',
       author: 'Сергей Тармашев',
@@ -180,7 +180,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 7,
+      id: 202003187,
       link: 'https://drive.google.com/uc?export=view&id=0BwHA7pKrbPtBaHI0WEtiODB0MHc',
       poster: 'https://drive.google.com/uc?export=view&id=1iAlPLS_3zaX2iciew4GQIbl_iFWT2TkQ',
       author: 'Сергей Тармашев',
@@ -195,7 +195,7 @@ export const data = {
   ],
   20200319: [
     {
-      id: 1,
+      id: 202003191,
       link: 'https://drive.google.com/uc?export=view&id=1HHm7EFXxmWympzy8kx22cd825AUlVg2N',
       poster: 'https://drive.google.com/uc?export=view&id=1_bUZhPgxHkvNGjeq6AWwdnhLn-AWdBic',
       author: 'Диана Гэблдон',
@@ -222,7 +222,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 2,
+      id: 202003192,
       link: 'https://drive.google.com/uc?export=view&id=1hA-LNW4-1cYHRMYmW4noO70sjHlDttSS',
       poster: 'https://drive.google.com/uc?export=view&id=1UiSIb8OfJ9LX5DPjErywXLSXvl5jPEft',
       author: 'Стивен Кинг',
@@ -234,7 +234,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 3,
+      id: 202003193,
       link: 'https://drive.google.com/uc?export=view&id=17q-FQiNt0qDl9WHJ6Azs3cRImPuPJJO5',
       poster: 'https://drive.google.com/uc?export=view&id=1POkwItqoV6AHF9ecaEf0q7DNV2U3-9Fk',
       author: 'Франк Тилье',
@@ -248,7 +248,7 @@ export const data = {
   ],
   20200320: [
     {
-      id: 1,
+      id: 202003201,
       link: 'https://drive.google.com/uc?export=view&id=16k490vU8DdeV_EsfuLGewOLiTPMVKytn',
       poster: 'https://drive.google.com/uc?export=view&id=1Dq5qtnlOC_TgvUJCBFORkTFqD_lTBbhw',
       author: 'Доктор Фил',
@@ -262,7 +262,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 2,
+      id: 202003202,
       link: 'https://drive.google.com/uc?export=view&id=1A0iLmdY9B-E6EUFlT0EHcGDE8EVD0qGr',
       poster: 'https://drive.google.com/uc?export=view&id=1xyBem_YlAtDtiObBA8Zz2OwBiqzjYesF',
       author: 'Дэн Симмонс',
@@ -274,7 +274,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 3,
+      id: 202003203,
       link: 'https://drive.google.com/uc?export=view&id=1sLJwnyEFbhVL_G2pXH1FP09KZ128-D-K',
       poster: 'https://drive.google.com/uc?export=view&id=1oqfxF4aPxYxrqfCnRRweIHKPP0GNUq1n',
       author: 'Айзек Азимов',
@@ -287,7 +287,7 @@ export const data = {
       voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
     },
     {
-      id: 4,
+      id: 202003204,
       link: 'https://drive.google.com/uc?export=view&id=1kEKck3Nx-tkqV3nXJIvkNqXgmiDQVyIe',
       poster: 'https://drive.google.com/uc?export=view&id=10WpR7ZAmYNisk9JcBVsX_WSj3_20kVV8',
       author: 'Джон Уиндем',
@@ -299,10 +299,10 @@ export const data = {
       Однажды вечерней порой жители Лондона с интересом наблюдали необычное явление – зеленый звездный дождь, озаривший все небо. Наутро свидетели загадочного явления проснулись слепыми, а вскоре стало ясно, что зрения лишилось почти все население Земли.
       В мире грядут большие перемены. Те немногие, кто сумел сохранить зрение, получают почти безграничную власть и доступ к накопленным человечеством ресурсам. Но беда, как известно, не приходит одна – и в действие вступает третья сила: триффиды, разумные хищные растения, способные передвигаться и охотиться на людей. Сложная система безопасности, созданная для сдерживания очень ценных, но чрезвычайно опасных растений, дает сбой, и триффиды вырываются на свободу.`,
       comments: ['Любимая книга'],
-      voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
+      voted: null,
     },
     {
-      id: 5,
+      id: 202003205,
       link: 'https://drive.google.com/uc?export=view&id=1TAJgxyCqdIDUXKGR9qKs-_K6xGN94gVX',
       poster: 'https://drive.google.com/uc?export=view&id=1aOD5z49QiJ9RRS3e7qYup4-6JheonMLn',
       author: 'Саймон Кларк',
@@ -312,7 +312,7 @@ export const data = {
       genres: ['Фантастика', 'Постапокалипсис'],
       desc: `«Ночь триффидов» — продолжение романа Уиндэма, написанное самым верным и талантливым из его «литературных учеников» — Саймоном Кларком. История борьбы людей и триффидов продолжается. Чем она закончится?`,
       comments: ['Любимая книга'],
-      voted: [5, 3, 4, 2, 5, 5, 4, 4, 5],
+      voted: [5, 5, 5],
     },
   ],
 };
@@ -325,8 +325,8 @@ export const data = {
 // data-файл +
 // стили для пустой страницы = height/min-height +
 // стили для home +
-// breadcrumbs
-// меню
+// breadcrumbs +
+// меню +
 // рейтинг
 // ссылки на подробности
 // страница подробностей
