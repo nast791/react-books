@@ -1,0 +1,30 @@
+.breadcrumbs {
+  width: 100%;
+
+  ul {
+    padding: 20px 0;
+  }
+
+  li {
+    display: inline-block;
+
+    &::after {
+      content: "/";
+      padding: 0 10px;
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+}
+
+.breadcrumbsActive {
+  cursor: default;
+  color: #2c98a8;
+
+  &:hover {
+    opacity: 1;
+    color: #2c98a8;
+  }
+}

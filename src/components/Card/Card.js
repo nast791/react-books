@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import cls from './Card.scss';
+import {Link} from "react-router-dom";
 
 const Card = (props) => {
   const [mouseOver, setMouseOver] = useState(false);
@@ -18,13 +19,14 @@ const Card = (props) => {
   }
 
   return (
-    <a className={classes.join(' ')} onMouseOver={openMoreInfo} onMouseOut={closeMoreInfo}>
+    <Link to={`/${props.id}`} className={classes.join(' ')} onMouseOver={openMoreInfo} onMouseOut={closeMoreInfo}>
       <img src={props.image} alt="" onLoad={loadedImage}/>
+      <div className={cls.cardRate}><span>{props.rate}</span></div>
       <div className={cls.cardMore}>
         <p>{props.author}</p>
         <p className={cls.cardTitle}>{props.title}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 
