@@ -1,5 +1,5 @@
 const initialState = {
-  url: "../src/data.json",
+  url: "src/data.json",
   book: null,
   loading: true,
   error: false
