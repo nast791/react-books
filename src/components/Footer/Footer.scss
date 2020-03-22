@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  min-height: 250px;
+  min-height: 200px;
   color: #FFFFFF;
   background-color: #000000;
   background-repeat: no-repeat;
@@ -24,45 +24,10 @@
     margin-bottom: 5px;
     font-size: 14px;
   }
-}
 
-.footerWrapper {
-  position: relative;
-  padding-top: 80px;
-
-  &::before, &::after {
-    position: absolute;
-    content: "";
-    top: -0.2px;
-    width: 50%;
-    height: 25px;
-    background-color: #FFFFFF;
-    z-index: 2;
+  div[class^="container"] {
+    padding-top: 40px;
   }
-
-  &::before {
-    left: 0;
-    clip-path: polygon(0 100%, 0 0, 100% 0, 97% 100%);
-  }
-
-  &::after {
-    right: 0;
-    clip-path: polygon(3% 100%, 0 0, 100% 0, 100% 100%);
-  }
-}
-
-.footerButton {
-  position: absolute;
-  content: "";
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 25px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 25px auto;
-  background-position: 50% 100%;
 }
 
 .footerCopyright {
@@ -71,53 +36,3 @@
 
 
 //--- responsive
-
-@media (max-width: 1600px) {
-  .footerWrapper {
-    &::before {
-      clip-path: polygon(0 100%, 0 0, 100% 0, 95% 100%);
-    }
-
-    &::after {
-      clip-path: polygon(5% 100%, 0 0, 100% 0, 100% 100%);
-    }
-  }
-}
-
-
-@media (max-width: 991px) {
-  .footerWrapper {
-    &::before {
-      clip-path: polygon(0 100%, 0 0, 100% 0, 93% 100%);
-    }
-
-    &::after {
-      clip-path: polygon(7% 100%, 0 0, 100% 0, 100% 100%);
-    }
-  }
-}
-
-
-@media (max-width: 767px) {
-  .footerWrapper {
-    &::before {
-      clip-path: polygon(0 100%, 0 0, 100% 0, 91% 100%);
-    }
-
-    &::after {
-      clip-path: polygon(9% 100%, 0 0, 100% 0, 100% 100%);
-    }
-  }
-}
-
-@media (max-width: 575px) {
-  .footerWrapper {
-    &::before {
-      clip-path: polygon(0 100%, 0 0, 100% 0, 87% 100%);
-    }
-
-    &::after {
-      clip-path: polygon(13% 100%, 0 0, 100% 0, 100% 100%);
-    }
-  }
-}

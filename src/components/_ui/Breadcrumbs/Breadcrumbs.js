@@ -1,15 +1,22 @@
 import React from 'react';
 import cls from './Breadcrumbs.scss';
 import Container from "../Container/Container";
-import {NavLink, withRouter} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 
 const Breadcrumbs = props => {
+  const location = useLocation();
   const routes = [
     { id: 1, label: 'Главная', path: '/', exact: true },
     { id: 2, label: 'Жанры', path: '/genres', exact: true },
     { id: 3, label: 'Авторы', path: '/authors', exact: true },
-    { id: 4, label: props.title, path: `${props.match.url}`, exact: true },
+    { id: 4, label: props.title, path: location.pathname, exact: true },
   ];
+
+  const cancelActive = (event) => {
+    if (event.target.closest(`.${cls.breadcrumbsActive}`)) {
+      event.preventDefault();
+    }
+  };
 
   const renderLinks = () => {
     return props.links.map((it) => {
@@ -17,7 +24,7 @@ const Breadcrumbs = props => {
         if (item.id === it) {
           return (
             <li key={index}>
-              <NavLink to={item.path} exact={item.exact} activeClassName={cls.breadcrumbsActive}>{item.label}</NavLink>
+              <NavLink to={item.path} exact={item.exact} activeClassName={cls.breadcrumbsActive} onClick={cancelActive}>{item.label}</NavLink>
             </li>
           );
         }
@@ -34,4 +41,4 @@ const Breadcrumbs = props => {
   );
 };
 
-export default withRouter(Breadcrumbs);
+export default Breadcrumbs;

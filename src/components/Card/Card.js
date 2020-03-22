@@ -4,23 +4,23 @@ import {Link} from "react-router-dom";
 
 const Card = (props) => {
   const [mouseOver, setMouseOver] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loadedImage, setLoadedImage] = useState(false);
 
   const openMoreInfo = () => setMouseOver(true);
   const closeMoreInfo = () => setMouseOver(false);
-  const loadedImage = () => setLoading(false);
+  const loadImage = () => setLoadedImage(true);
 
   const classes = [cls.card];
   if (mouseOver) {
     classes.push(cls.cardOpen);
   }
-  if (!loading) {
+  if (loadedImage) {
     classes.push(cls.cardBorder);
   }
 
   return (
     <Link to={`/${props.id}`} className={classes.join(' ')} onMouseOver={openMoreInfo} onMouseOut={closeMoreInfo}>
-      <img src={props.image} alt="" onLoad={loadedImage}/>
+      <img src={props.image} alt="" onLoad={loadImage}/>
       <div className={cls.cardRate}><span>{props.rate}</span></div>
       <div className={cls.cardMore}>
         <p>{props.author}</p>

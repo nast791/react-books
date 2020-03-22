@@ -10,11 +10,10 @@ const App = () => {
   return (
     <div className={cls.wrapper}>
       <Switch>
-        {/*<Route path="/catalog/:id" component={}/>*/}
         <Route path="/" exact component={Home}/>
-        <Route path="/:id" exact component={Book}/>
         <Route path="/genres" exact component={Genres}/>
         <Route path="/authors" exact component={Authors}/>
+        <Route path="/:id" exact component={Book}/>
         <Redirect to="/" />
       </Switch>
     </div>

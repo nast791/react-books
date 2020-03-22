@@ -1,15 +1,20 @@
 import React from 'react';
 import cls from './Logo.scss';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 const Logo = () => {
-  const scrollTop = () => window.scrollTo({top:0, behavior: "smooth"});
+  const cancelActiveAndScroll = (event) => {
+    if (event.target.closest(`.${cls.logoActiveLink}`)) {
+      event.preventDefault();
+    }
+    window.scrollTo({top:0, behavior: "smooth"});
+  };
 
   return (
-    <Link to="/" onClick={scrollTop}>
+    <NavLink to="/" exact onClick={cancelActiveAndScroll} activeClassName={cls.logoActiveLink}>
       <span className={cls.logoText}>Books Area</span>
-    </Link>
+    </NavLink>
   );
 };
 
