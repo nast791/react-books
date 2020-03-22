@@ -45,7 +45,8 @@ module.exports = {
       {
         test: /\.(css)$/,
         exclude: /static\/.*\.(css)$/,
-        use: [ MiniCssExtractPlugin.loader, {loader: "css-loader", options: {modules: {localIdentName: '[local]__[hash:base64:5]'}}} ]
+        use: [ MiniCssExtractPlugin.loader, {loader: "css-loader", options: {
+          modules: {localIdentName: '[local]__[hash:base64:5]'}}} ]
       },
 
 
