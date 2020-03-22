@@ -1,5 +1,5 @@
 const initialState = {
-  url: "static/data/data.json",
+  url: "data.json",
   catalog: null,
   loading: true,
   error: false
