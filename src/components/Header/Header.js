@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import cls from './Header.scss';
 import ImageBooks from '../../img/books.jpg';
 import Logo from "../_ui/Logo/Logo";
@@ -6,17 +6,15 @@ import Container from "../_ui/Container/Container";
 import Search from "../Search/Search";
 import ToggleMenu from "../_ui/ToggleMenu/ToggleMenu";
 import Menu from "../Menu/Menu";
+import {connect} from "react-redux";
+import {closeMenu, openMenu} from "../../store/actions/header";
 
 const Header = props => {
-  const [menu, setMenu] = useState(false);
-
-  const openMenu = () => {
-    setMenu(true);
-  };
-
   const closeMenu = (event) => {
-    if (event.target !== document.querySelector('[class^="menuActiveLink"]')) {
-      setMenu(false);
+    if (event.target.closest(`[class^="menuActiveLink"]`)) {
+      event.preventDefault();
+    } else {
+      props.closeMenu();
     }
   };
 
@@ -32,8 +30,8 @@ const Header = props => {
           <Logo/>
           <Search/>
         </Container>
-        <ToggleMenu openMenu={openMenu}/>
-        <Menu isOpen={menu} onClose={closeMenu}/>
+        <ToggleMenu openMenu={props.openMenu}/>
+        <Menu isOpen={props.menu} onClose={closeMenu}/>
       </div>
       <div className={cls.headerBottom} style={{'backgroundImage': `url(${ImageBooks})`}}>
         <Container>
@@ -45,4 +43,16 @@ const Header = props => {
   );
 };
 
-export default Header;
+function mapStateToProps(state) {
+  const { menu } = state.header;
+  return { menu };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    openMenu: () => dispatch(openMenu()),
+    closeMenu: () => dispatch(closeMenu())
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
