@@ -6,7 +6,7 @@ import Input from "../_ui/Input/Input";
 const Search = () => {
   return (
     <div className={cls.search}>
-      <Input style={{'backgroundImage': `url(${ImageSearch})`}} onChange={(event) => event.target.value } placeholder="Введите название произведения или автора" name="search" />
+      <Input style={{'backgroundImage': `url(${ImageSearch})`}} onChange={(event) => event.target.value } placeholder="Введите название произведения или автора" name="search" autocomplete="off" />
     </div>
   );
 };
