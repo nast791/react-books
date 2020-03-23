@@ -9,7 +9,8 @@ const Breadcrumbs = props => {
     { id: 1, label: 'Главная', path: '/', exact: true },
     { id: 2, label: 'Жанры', path: '/genres', exact: true },
     { id: 3, label: 'Авторы', path: '/authors', exact: true },
-    { id: 4, label: props.title, path: location.pathname, exact: true },
+    { id: 4, label: 'Серии', path: '/series', exact: true },
+    { id: 5, label: props.title, path: location.pathname, exact: true },
   ];
 
   const cancelActive = (event) => {

@@ -16,6 +16,7 @@ const Menu = props => {
           <li><NavLink to="/" exact activeClassName={cls.menuActiveLink} onClick={event => props.onClose(event)}>Главная</NavLink></li>
           <li><NavLink to="/genres" exact activeClassName={cls.menuActiveLink} onClick={event => props.onClose(event)}>Жанры</NavLink></li>
           <li><NavLink to="/authors" exact activeClassName={cls.menuActiveLink} onClick={event => props.onClose(event)}>Авторы</NavLink></li>
+          <li><NavLink to="/series" exact activeClassName={cls.menuActiveLink} onClick={event => props.onClose(event)}>Серии</NavLink></li>
         </ul>
       </nav>
       { props.isOpen ? <Overlay onClick={event => props.onClose(event)} /> : null }

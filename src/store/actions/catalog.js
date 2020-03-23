@@ -2,7 +2,7 @@ export function getCatalog(url) {
   return async dispatch => {
     dispatch(getCatalogStart());
     try {
-      const data = await fetch(url).then(res => res.json()).catch((err) => console.log(err));
+      const data = await fetch(url).then(res => res.json());
       const catalog = data.books;
 
       dispatch(getCatalogSuccess(catalog));
