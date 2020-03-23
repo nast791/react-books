@@ -13,23 +13,24 @@ const Book = props => {
   const location = useLocation();
   const params = useParams();
   useEffect(() => {
-    props.getBook(props.url, params.id);
-  }, [props.url, location]);
+    props.getBook(props.url, props.url2, params.id);
+  }, [props.url, props.url2, location]);
 
   const renderItem = () => {
     if (props.book) {
-      const rate = props.book.voted ? (props.book.voted.reduce((acc, next) => acc + next) / props.book.voted.length).toFixed(1) : (0).toFixed(1);
+      const {voted, title, poster, author, series, number, genres, desc, link} = props.book;
+      const rate = voted ? (voted.reduce((acc, next) => acc + next) / voted.length).toFixed(1) : (0).toFixed(1);
       return (
-        <BookItem title={props.book.title} image={props.book.poster} author={props.book.author} rate={rate} id={props.match.params.id}  key={props.match.params.id}/>
+        <BookItem title={title} image={poster} author={author} rate={rate} votedLength={voted.length || 0} id={params.id} genres={genres} series={series} number={number} desc={desc} link={link} key={params.id}/>
       );
     }
   };
 
   return (
     <React.Fragment>
-      <Header bottom />
+      <Header top />
       { !props.book || props.loading || !!props.error ? null :
-        <Breadcrumbs links={[1, 4]} title={props.book.title} /> }
+        <Breadcrumbs links={[1, 5]} title={props.book.title} /> }
       { props.loading ? <Spinner/> :
         !!props.error ? <Error error={props.error}/> : renderItem() }
       <Footer/>
@@ -38,12 +39,12 @@ const Book = props => {
 };
 
 function mapStateToProps(state) {
-  const { book, loading, error, url } = state.book;
-  return { book, loading, error, url };
+  const { book, loading, error, url, url2 } = state.book;
+  return { book, loading, error, url, url2 };
 }
 
 function mapDispatchToProps(dispatch) {
-  return { getBook: (url, id) => dispatch(getBook(url, id)) };
+  return { getBook: (url, url2, id) => dispatch(getBook(url, url2, id)) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Book);

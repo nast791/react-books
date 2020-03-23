@@ -1,0 +1,17 @@
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.ratingBtn {
+  svg path {
+    fill: #31BDD7;
+  }
+}
+
+.ratingBtnActive {
+  svg path {
+    fill: #ffc107 !important;
+  }
+}

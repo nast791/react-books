@@ -19,7 +19,7 @@ const Header = props => {
   };
 
   const classes = [cls.header];
-  if (props.bottom) {
+  if (props.top) {
     classes.push(cls.headerOnlyTop);
   }
 

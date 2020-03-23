@@ -1,9 +1,11 @@
-export function getBook(url, id) {
+export function getBook(url, url2, id) {
   return async dispatch => {
     dispatch(getBookStart());
     try {
-      const data = await fetch(url).then(res => res.json()).catch((err) => console.log(err));
+      let data2;
+      const data = await fetch(url).then(res => res.json()).then(data2 = await fetch(url2).then(res => res.json()));
       const book = data.books[id];
+      book.genres = book.genres.map((it) => data2.genres[it]);
 
       dispatch(getBookSuccess(book));
     } catch (e) {

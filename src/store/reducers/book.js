@@ -1,5 +1,6 @@
 const initialState = {
   url: "data.json",
+  url2: "genres.json",
   book: null,
   loading: true,
   error: false
