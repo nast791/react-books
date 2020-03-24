@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/series" exact component={Series}/>
         <Route path="/genres/:id" exact component={Genres}/>
         <Route path="/authors/:id" exact component={Authors}/>
-        <Route path="/series/:id" exact component={Authors}/>
+        <Route path="/series/:id" exact component={Series}/>
         <Route path="/:id" exact component={Book}/>
         <Redirect to="/" />
       </Switch>

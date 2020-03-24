@@ -2,12 +2,12 @@ import {URL} from '../constants';
 
 const initialState = {
   url: URL,
-  catalog: null,
+  list: null,
   loading: true,
   error: false
 };
 
-export default function catalogReducer(state = initialState, action) {
+export default function alphabeticalListReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_START":
       return {
@@ -15,7 +15,7 @@ export default function catalogReducer(state = initialState, action) {
       };
     case "FETCH_SUCCESS":
       return {
-        ...state, loading: false, catalog: action.catalog
+        ...state, loading: false, list: action.list
       };
     case "FETCH_ERROR":
       return {

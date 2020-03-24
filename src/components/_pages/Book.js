@@ -1,20 +1,19 @@
 import React, {useEffect} from 'react';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Breadcrumbs from "../_ui/Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import BookItem from "../BookItem/BookItem";
 import {connect} from "react-redux";
 import {getBook} from "../../store/actions/book";
 import Spinner from "../_ui/Spinner/Spinner";
 import Error from "../_ui/Error/Error";
-import {useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const Book = props => {
-  const location = useLocation();
   const params = useParams();
   useEffect(() => {
     props.getBook(props.url, props.url2, params.id);
-  }, [props.url, props.url2, location]);
+  }, [props.url, props.url2]);
 
   const renderItem = () => {
     if (props.book) {

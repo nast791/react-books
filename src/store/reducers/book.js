@@ -1,6 +1,8 @@
+import {URL, URL2} from '../constants';
+
 const initialState = {
-  url: "data.json",
-  url2: "genres.json",
+  url: URL,
+  url2: URL2,
   book: null,
   loading: true,
   error: false

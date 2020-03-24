@@ -19,7 +19,7 @@ const BookItem = props => {
       <span />
     </React.Fragment>
   ));
-  const authorsTag = props.author.split(' ').map((it) => it).join('');
+  const authorsTag = props.author.split(' ').join('');
   const description = props.desc.map((it, index) => <p key={index}>{it}</p>);
 
   return (
@@ -36,7 +36,7 @@ const BookItem = props => {
               : null
             }
             <p><b>Рейтинг:</b> {props.rate} (голосов: {props.votedLength})</p>
-            <Rating/>
+            <Rating id={props.id}/>
             <a className={cls.bookItemDownload} href={props.link} download><span>Скачать</span></a>
           </div>
         </div>

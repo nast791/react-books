@@ -6,13 +6,11 @@ import {connect} from "react-redux";
 import {getCatalog} from "../../store/actions/catalog";
 import Spinner from "../_ui/Spinner/Spinner";
 import Error from "../_ui/Error/Error";
-import {useLocation} from "react-router-dom";
 
 const Catalog = props => {
-  const location = useLocation();
   useEffect(() => {
     props.getCatalog(props.url);
-  }, [props.url, location]);
+  }, [props.url]);
 
 
   const renderItems = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import cls from './Breadcrumbs.scss';
-import Container from "../Container/Container";
+import Container from "../_ui/Container/Container";
 import {NavLink, useLocation} from "react-router-dom";
 
 const Breadcrumbs = props => {
@@ -34,11 +34,11 @@ const Breadcrumbs = props => {
   };
 
   return(
-    <div className={cls.breadcrumbs}>
+    <section className={cls.breadcrumbs}>
       <Container>
         <ul>{ renderLinks() }</ul>
       </Container>
-    </div>
+    </section>
   );
 };
 

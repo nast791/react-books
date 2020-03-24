@@ -8,15 +8,18 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from 'react-redux';
 import rootReducer from "./store/reducers/rootReducer";
 import thunk from 'redux-thunk';
+import {CookiesProvider} from 'react-cookie';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const app = (
-  <Provider store={store}>
-    <BrowserRouter basename={ location.hostname === 'localhost' ? '/' : '/react-books' }>
-      <App/>
-    </BrowserRouter>
-  </Provider>
+  <CookiesProvider>
+    <Provider store={store}>
+      <BrowserRouter basename={ location.hostname === 'localhost' ? '/' : '/react-books' }>
+        <App/>
+      </BrowserRouter>
+    </Provider>
+  </CookiesProvider>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
