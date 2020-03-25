@@ -20,7 +20,7 @@ const Book = props => {
       const {voted, title, poster, author, series, number, genres, desc, link} = props.book;
       const rate = voted ? (voted.reduce((acc, next) => acc + next) / voted.length).toFixed(1) : (0).toFixed(1);
       return (
-        <BookItem title={title} image={poster} author={author} rate={rate} votedLength={voted.length || 0} id={params.id} genres={genres} series={series} number={number} desc={desc} link={link} key={params.id}/>
+        <BookItem title={title.trim()} image={poster.trim()} author={author.trim()} rate={rate} votedLength={voted.length || 0} id={params.id} genres={genres} series={series} number={number} desc={desc} link={link.trim()} key={params.id}/>
       );
     }
   };

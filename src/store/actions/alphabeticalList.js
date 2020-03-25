@@ -13,9 +13,13 @@ export function getList(url, field) {
         }
       });
 
+      // переставляем имя/фамилия в авторах, сортируем
+      const fieldValuesSort = (field === 'author') ?
+      fieldValues.map((it) => [it.split(' ')[1], it.split(' ')[0]].join(' ')).sort() : fieldValues.sort();
+
       const letters = {}; // получаем объект вида {буква: [значение1, значение2]}
-      fieldValues.map((it) => {
-        const letter = (field === 'author') ? it.split(' ')[1].charAt(0) : it.charAt(0);
+      fieldValuesSort.map((it) => {
+        const letter = it.charAt(0);
         if (!Object.keys(letters).includes(letter)) {
           letters[letter] = new Array(it);
         } else {

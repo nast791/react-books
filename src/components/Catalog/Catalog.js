@@ -1,25 +1,30 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import cls from './Catalog.scss';
 import Card from "../Card/Card";
 import Container from "../_ui/Container/Container";
-import {connect} from "react-redux";
-import {getCatalog} from "../../store/actions/catalog";
 import Spinner from "../_ui/Spinner/Spinner";
 import Error from "../_ui/Error/Error";
 
 const Catalog = props => {
-  useEffect(() => {
-    props.getCatalog(props.url);
-  }, [props.url]);
-
-
   const renderItems = () => {
     const data = props.catalog || {};
-    return [...Object.keys(data)].reverse().map((it) => {
+
+    let dataArr;
+    if (props.sortField) {
+      if (props.sortField === 'genres') {
+        dataArr = [...Object.keys(data)].reverse().filter(it => data[it][props.sortField].includes(+props.sortValue));
+      } else {
+        dataArr = [...Object.keys(data)].reverse().filter(it => data[it][props.sortField] === props.sortValue);
+      }
+    } else {
+      dataArr = [...Object.keys(data)].reverse();
+    }
+
+    return dataArr.map((it) => {
       const item = data[it];
       const rate = item.voted ? (item.voted.reduce((acc, next) => acc + next) / item.voted.length).toFixed(1) : (0).toFixed(1);
       return (
-        <Card title={item.title} image={item.poster} author={item.author} rate={rate} id={it} key={it}/>
+        <Card title={item.title.trim()} image={item.poster.trim()} author={item.author.trim()} rate={rate} id={it} key={it}/>
       );
     });
   };
@@ -36,13 +41,4 @@ const Catalog = props => {
   );
 };
 
-function mapStateToProps(state) {
-  const { catalog, loading, error, url } = state.catalog;
-  return { catalog, loading, error, url };
-}
-
-function mapDispatchToProps(dispatch) {
-  return { getCatalog: (url) => dispatch(getCatalog(url)) };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Catalog);
+export default Catalog;
