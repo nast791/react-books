@@ -19,8 +19,7 @@ const BookItem = props => {
       <span />
     </React.Fragment>
   ));
-  const authorsTag = props.author.split(' ').join('');
-  const description = props.desc.map((it, index) => <p key={index}>{it}</p>);
+  const description = props.desc.map((it, index) => <p key={index}>{it.trim()}</p>);
 
   return (
     <div className={cls.bookItem}>
@@ -29,10 +28,10 @@ const BookItem = props => {
           <img src={props.image} alt="" className={classes} onLoad={loadImage}/>
           <div className={cls.bookItemInfo}>
             <p><b>Название:</b> {props.title}</p>
-            <p><b>Автор:</b> <Link to={`authors/${authorsTag}`}>{props.author}</Link></p>
+            <p><b>Автор:</b> <Link to={`authors/${[props.author.split(' ')[1], props.author.split(' ')[0]].join('+')}`}>{props.author}</Link></p>
             <p className={cls.bookItemGenre}><b>Жанр:</b> {genres}</p>
             { props.series ?
-              <p><b>Серия:</b> <Link to={`series/${props.series}`}>{props.series}</Link> <span>#{props.number}</span></p>
+              <p><b>Серия:</b> <Link to={`series/${props.series.split(' ').join('+')}`}>{props.series.trim()}</Link> <span>#{props.number.trim()}</span></p>
               : null
             }
             <p><b>Рейтинг:</b> {props.rate} (голосов: {props.votedLength})</p>

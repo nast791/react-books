@@ -3,13 +3,12 @@ import {URL, URL2} from '../constants';
 const initialState = {
   url: URL,
   url2: URL2,
-  catalog: null,
   genres: null,
   loading: true,
   error: false
 };
 
-export default function catalogReducer(state = initialState, action) {
+export default function genresListReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_START":
       return {
@@ -17,7 +16,7 @@ export default function catalogReducer(state = initialState, action) {
       };
     case "FETCH_SUCCESS":
       return {
-        ...state, loading: false, catalog: action.catalog, genres: action.genres
+        ...state, loading: false, genres: action.genres
       };
     case "FETCH_ERROR":
       return {

@@ -20,7 +20,7 @@ const AlphabeticalList = props => {
       return(
         <div key={index}>
           <p>{it}</p>
-          { props.list[it].map((item, idx) => <Link to={`${location.pathname}/${item.split(' ').join('')}`} key={idx} title={item} sort={props.field} value={item}>{item}</Link>) }
+          { props.list[it].map((item, idx) => <Link to={`${location.pathname}/${item.split(' ').join('+')}`} key={idx}>{item}</Link>) }
         </div>
       );
     });
