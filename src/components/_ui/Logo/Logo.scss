@@ -12,3 +12,10 @@
 .logoActiveLink {
   cursor: default;
 }
+
+@media (max-width: 575px) {
+  .logoText {
+    font-size: 36px;
+    letter-spacing: 3.6px;
+  }
+}

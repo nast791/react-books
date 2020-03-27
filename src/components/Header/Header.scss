@@ -77,3 +77,43 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .headerTop {
+    padding: 10px 0 15px;
+
+    div[class^="container"] {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .headerBottom {
+    min-height: 250px;
+  }
+
+  .headerTitle {
+    font-size: 28px;
+  }
+
+  .headerDesc {
+    margin: 10px 0 -5px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .headerBottom {
+    min-height: 180px;
+  }
+
+  .headerTitle {
+    font-size: 24px;
+    letter-spacing: 1.8px;
+  }
+
+  .headerDesc {
+    font-size: 16px;
+  }
+}

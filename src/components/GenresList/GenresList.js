@@ -18,11 +18,16 @@ const GenresList = props => {
     const data = props.genres || {};
     return Object.keys(data).map((it, index) => {
       const item = data[it];
-      return <Link to={`${location.pathname}/${item.tag}`} key={index}>{item.title}</Link>
+      return (
+        <div key={index}>
+          <Link to={`${location.pathname}/${item.tag}`}><span>{item.title}</span></Link>
+          <p>{item.desc}</p>
+        </div>
+      )
     });
   };
 
-  const genresBlock = <div>{renderList()}</div>;
+  const genresBlock = <div className={cls.genresListWrapper}>{renderList()}</div>;
 
   return (
     <section className={cls.genresList}>
@@ -35,8 +40,8 @@ const GenresList = props => {
 };
 
 function mapStateToProps(state) {
-  const { genres, loading, error, url, url2 } = state.genresList;
-  return { genres, loading, error, url, url2 };
+  const { genres, loading, error, url2 } = state.genresList;
+  return { genres, loading, error, url2 };
 }
 
 function mapDispatchToProps(dispatch) {

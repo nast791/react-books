@@ -1,3 +1,60 @@
 .genresList {
   flex-grow: 1;
+  padding: 25px 0 20px;
+}
+
+.genresListWrapper {
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin-top: 2px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 2px solid #31BDD7;
+    background-color: #31BDD7;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    flex: 1;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .genresList {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .genresListWrapper {
+    div {
+      display: block;
+      padding-bottom: 30px;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .genresListWrapper {
+    p {
+      font-size: 12px;
+    }
+  }
 }
