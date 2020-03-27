@@ -2,7 +2,7 @@
   position: absolute;
   content: "";
   top: 50%;
-  right: 30px;
+  right: 15px;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
@@ -10,4 +10,10 @@
   background-position: 50% 50%;
   background-size: 30px auto;
   z-index: 3;
+}
+
+@media (max-width: 992px) {
+  .toggleMenu {
+    top: 30px;
+  }
 }

@@ -35,4 +35,16 @@
 }
 
 
-//--- responsive
+@media (max-width: 575px) {
+  .footer {
+    min-height: 160px;
+
+    div[class^="container"] {
+      padding-top: 25px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

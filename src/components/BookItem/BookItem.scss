@@ -1,6 +1,6 @@
 .bookItem {
   flex-grow: 1;
-  padding-top: 5px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -62,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 140px;
   height: 36px;
   margin-top: 10px;
   font-weight: 600;
@@ -92,5 +92,38 @@
 
   p {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .bookItemWrapper {
+    display: block;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .bookItemInfo {
+    margin-top: 5px;
+    margin-left: 0;
+    padding: 7px 0;
+    font-size: 14px;
+  }
+
+  .bookItemDownload {
+    width: 152px;
+    font-size: 16px;
+  }
+
+  .bookItemDesc {
+    margin-top: 20px;
+    b {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 }

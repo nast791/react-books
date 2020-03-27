@@ -2,7 +2,7 @@
   width: 100%;
 
   ul {
-    padding: 20px 0;
+    padding: 20px 0 0;
   }
 
   li {
@@ -26,5 +26,27 @@
   &:hover {
     opacity: 1;
     color: #2c98a8;
+  }
+}
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    ul {
+      padding-top: 45px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .breadcrumbs {
+    ul {
+      padding-top: 40px;
+      font-size: 14px;
+    }
+    li {
+      &::after {
+        padding: 0 7px;
+      }
+    }
   }
 }

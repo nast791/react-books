@@ -18,9 +18,11 @@ const AlphabeticalList = props => {
     const data = props.list || {};
     return Object.keys(data).map((it, index) => {
       return(
-        <div key={index}>
-          <p>{it}</p>
-          { props.list[it].map((item, idx) => <Link to={`${location.pathname}/${item.split(' ').join('+')}`} key={idx}>{item}</Link>) }
+        <div className={cls.alphabeticalListItem} key={index}>
+          <p className={cls.alphabeticalListLetter}>{it}</p>
+          <div className={cls.alphabeticalListLinks}>
+          { props.list[it].map((item, idx) => <p key={idx}><Link to={`${location.pathname}/${item.split(' ').join('+')}`}>{item}</Link></p>) }
+          </div>
         </div>
       );
     });
@@ -29,10 +31,8 @@ const AlphabeticalList = props => {
   return (
     <section className={cls.alphabeticalList}>
       <Container>
-        <div>
-          { props.loading ? <Spinner/> :
-            !!props.error ? <Error error={props.error}/> : renderList() }
-        </div>
+        { props.loading ? <Spinner/> :
+          !!props.error ? <Error error={props.error}/> : renderList() }
       </Container>
     </section>
   );
