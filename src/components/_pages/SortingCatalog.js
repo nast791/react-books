@@ -5,7 +5,7 @@ import Catalog from "../Catalog/Catalog";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import {useParams, useLocation} from "react-router-dom";
 import {connect} from "react-redux";
-import {getCatalog} from "../../store/actions/catalog";
+import {getCatalog} from "../../store/actions/fetch";
 
 const SortingCatalog = props => {
   const params = useParams();
@@ -13,17 +13,17 @@ const SortingCatalog = props => {
   const sortField = location.pathname.split('/')[1] === 'authors' ? 'author' : location.pathname.split('/')[1];
 
   useEffect(() => {
-    props.getCatalog(props.url, props.url2);
-  }, [props.url, props.url2]);
+    props.getCatalog(props.url);
+  }, [props.url + 'books.json']);
 
   const getGenresTitle = () => {
     const data = props.genres || {};
-    return Object.keys(data).map(it => data[it]).filter(item => item.tag === params.id).map(i => i.title).join('');
+    return Object.keys(data).map(it => data[it]).filter(item => item && item.tag === params.id).map(i => i.title).join('');
   };
 
   const getSortValue = () => {
     const data = props.genres || {};
-    return Object.keys(data).filter(it => data[it].tag === params.id).join('');
+    return Object.keys(data).filter(it => data[it] && data[it].tag === params.id).join('');
   };
 
 
@@ -58,12 +58,12 @@ const SortingCatalog = props => {
 };
 
 function mapStateToProps(state) {
-  const { catalog, loading, error, url, url2, genres } = state.catalog;
-  return { catalog, loading, error, url, url2, genres };
+  const { catalog, loading, error, url, genres } = state.catalog;
+  return { catalog, loading, error, url, genres };
 }
 
 function mapDispatchToProps(dispatch) {
-  return { getCatalog: (url, url2) => dispatch(getCatalog(url, url2)) };
+  return { getCatalog: (url) => dispatch(getCatalog(url)) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SortingCatalog);

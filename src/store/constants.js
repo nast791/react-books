@@ -1,2 +1,1 @@
-export const URL = 'data.json';
-export const URL2 = 'genres.json';
+export const BASEURL = 'https://books-aeb9d.firebaseio.com/';

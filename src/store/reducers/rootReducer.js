@@ -1,8 +1,6 @@
 import {combineReducers} from "redux";
-import catalog from "./catalog";
-import book from "./book";
+import catalog from "./fetch";
 import header from "./header";
-import alphabeticalList from "./alphabeticalList";
-import genresList from "./genresList";
+import search from "./search";
 
-export default combineReducers({catalog, book, header, alphabeticalList, genresList});
+export default combineReducers({catalog, header, search});
