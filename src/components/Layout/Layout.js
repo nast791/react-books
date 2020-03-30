@@ -8,17 +8,15 @@ const Layout = props => {
     props.getSearch(props.url, props.debouncedValue);
   }, [props.debouncedValue]);
 
-  console.log(props);
-
   return (
     <div className={cls.wrapper}>{props.children}</div>
   );
 };
 
 function mapStateToProps(state) {
-  const { url, search, searchError } = state.catalog;
+  const { url, search, searchError, searchOpen } = state.catalog;
   const { debouncedValue } = state.search;
-  return { url, search, searchError, debouncedValue };
+  return { url, search, searchError, searchOpen, debouncedValue };
 }
 
 function mapDispatchToProps(dispatch) {
