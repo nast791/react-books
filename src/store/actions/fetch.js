@@ -92,13 +92,15 @@ function compareTitles(a, b) {
 
 export function getSearch(url, value) {
   return async dispatch => {
-    if (!value) return;
+    if (value) value = value.trim();
+    if (!value) {
+      dispatch(resetSearch());
+      return;
+    }
     try {
       const data = await fetch(`${url}books.json`).then(res => res.json());
       const lengthSearchItems = 5; // выводим 5 элементов
       const search = Object.entries(data).filter(it => it[1].title.toLowerCase().includes(value.trim().toLowerCase())).sort(compareTitles).filter((item, index) => { if (index < lengthSearchItems) return item });
-
-      console.log(search);
 
       dispatch(getSearchSuccess(search));
     } catch (e) {
@@ -160,5 +162,11 @@ export function getSearchError(errorText) {
   return {
     type: "SEARCH_ERROR",
     searchError: errorText
+  }
+}
+
+export function resetSearch() {
+  return {
+    type: "SEARCH_RESET"
   }
 }

@@ -149,7 +149,7 @@ body{font-family:"Proxima Nova", sans-serif;font-size:16px;line-height:1.2;margi
 
 .container__3nrvK{max-width:1200px;width:100%;margin:0 auto;padding:0 15px}
 
-.search__11-Uo{max-width:500px;width:100%;height:40px}.search__11-Uo input{padding-right:30px;background-repeat:no-repeat;background-position:right 5px top 50%;background-size:20px auto}@media (max-width: 1350px){.search__11-Uo{margin-right:80px}}@media (max-width: 992px){.search__11-Uo{max-width:450px;height:30px;margin-top:5px;font-size:14px}.search__11-Uo input{padding-right:25px;background-size:15px auto}}
+.search__11-Uo{max-width:500px;width:100%;height:40px;position:relative}.search__11-Uo input{padding-right:30px;background-repeat:no-repeat;background-position:right 5px top 50%;background-size:20px auto}.searchResults__JnGdr{position:absolute;content:"";left:0;top:100%;width:100%;padding:5px 0;border-top:1px solid #CCCCCC;background-color:#FFFFFF;border-radius:5px;box-shadow:1px 1px 3px 0 rgba(0,0,0,0.2)}.searchResults__JnGdr a{display:block;padding:5px 30px 5px 15px;border-bottom:1px dashed #CCCCCC}.searchResults__JnGdr a:last-of-type{border-bottom:none}.searchResults__JnGdr a:hover{background-color:#d3eff2}.searchResults__JnGdr a span{display:inline-block}.searchResults__JnGdr p{padding:3px 30px 3px 15px}@media (max-width: 1350px){.search__11-Uo{margin-right:80px}}@media (max-width: 992px){.search__11-Uo{max-width:450px;height:30px;margin-top:5px;font-size:14px}.search__11-Uo input{padding-right:25px;background-size:15px auto}.searchResults__JnGdr a,p{padding-right:25px}}
 
 .input__1Wzak{width:100%;height:100%;padding:0 15px;border:none;border-radius:5px;color:gray}
 

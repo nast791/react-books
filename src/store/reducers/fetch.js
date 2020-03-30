@@ -9,7 +9,8 @@ const initialState = {
   loading: true,
   error: false,
   search: null,
-  searchError: false
+  searchError: false,
+  searchOpen: false
 };
 
 export default function catalogReducer(state = initialState, action) {
@@ -40,11 +41,15 @@ export default function catalogReducer(state = initialState, action) {
       };
     case "SEARCH_SUCCESS":
       return {
-        ...state, search: action.search
+        ...state, search: action.search, searchError: false, searchOpen: true
       };
     case "SEARCH_ERROR":
       return {
-        ...state, searchError: action.searchError
+        ...state, searchError: action.searchError, searchOpen: true
+      };
+    case "SEARCH_RESET":
+      return {
+        ...state, search: null, searchError: false, searchOpen: false
       };
     default:
       return state;
