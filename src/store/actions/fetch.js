@@ -110,6 +110,29 @@ export function getSearch(url, value) {
   }
 }
 
+export function sendRating(value, id, url, voted, storageAvailable) {
+  return async dispatch => {
+    const data = (!voted) ? [...value] : [...voted, value];
+    try {
+      await fetch(`${url}books/${id}/voted.json`, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(() => {
+        if (storageAvailable) {
+          window.localStorage.setItem(id, value);
+        }
+      });
+
+      dispatch(sendRatingSuccess());
+    } catch (e) {
+      console.log('Не удалось загрузить данные на сервер');
+    }
+  }
+}
+
 export function getFetchStart() {
   return {
     type: "FETCH_START"
@@ -168,5 +191,11 @@ export function getSearchError(errorText) {
 export function resetSearch() {
   return {
     type: "SEARCH_RESET"
+  }
+}
+
+export function sendRatingSuccess() {
+  return {
+    type: "SEND_RATING_SUCCESS"
   }
 }

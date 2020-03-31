@@ -10,14 +10,15 @@ const initialState = {
   error: false,
   search: null,
   searchError: false,
-  searchOpen: false
+  searchOpen: false,
+  update: false
 };
 
 export default function catalogReducer(state = initialState, action) {
   switch (action.type) {
     case "FETCH_START":
       return {
-        ...state, loading: true
+        ...state, loading: true, update: false
       };
     case "FETCH_ERROR":
       return {
@@ -50,6 +51,10 @@ export default function catalogReducer(state = initialState, action) {
     case "SEARCH_RESET":
       return {
         ...state, search: null, searchError: false, searchOpen: false
+      };
+    case "SEND_RATING_SUCCESS":
+      return {
+        ...state, update: true
       };
     default:
       return state;

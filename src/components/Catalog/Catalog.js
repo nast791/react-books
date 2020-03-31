@@ -22,7 +22,7 @@ const Catalog = props => {
 
     return dataArr.map((it) => {
       const item = data[it];
-      const rate = item.voted ? (item.voted.reduce((acc, next) => acc + next) / item.voted.length).toFixed(1) : (0).toFixed(1);
+      const rate = item.voted ? (item.voted.reduce((acc, next) => Number(acc) + Number(next)) / item.voted.length).toFixed(1) : (0).toFixed(1);
       return (
         <Card title={item.title.trim()} image={item.poster.trim()} author={item.author.trim()} rate={rate} id={it} key={it}/>
       );
