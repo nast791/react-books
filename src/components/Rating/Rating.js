@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import cls from './Rating.scss';
 import {useLocation} from 'react-use';
+import {connect} from "react-redux";
+import {sendRating} from "../../store/actions/fetch";
 
 function storageAvailable() {
   try {
@@ -48,9 +50,9 @@ const Rating = props => {
   };
 
   function saveValue(event) {
-    if (storageAvailable() && !window.localStorage.getItem(props.id)) {
+    if (!window.localStorage.getItem(props.id)) {
       const value = event.target.closest(`.${cls.ratingBtn}`).value;
-      window.localStorage.setItem(props.id, value);
+      props.sendRating(value, props.id, props.url, props.voted, storageAvailable());
     }
   }
 
@@ -74,4 +76,8 @@ const Rating = props => {
   );
 };
 
-export default Rating;
+function mapDispatchToProps(dispatch) {
+  return { sendRating: (value, id, url, voted, storageAvailable) => dispatch(sendRating(value, id, url, voted, storageAvailable)) };
+}
+
+export default connect(null, mapDispatchToProps)(Rating);

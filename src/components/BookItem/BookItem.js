@@ -35,7 +35,7 @@ const BookItem = props => {
               : null
             }
             <p><b>Рейтинг:</b> {props.rate} (голосов: {props.votedLength})</p>
-            <Rating id={props.id}/>
+            <Rating id={props.id} voted={props.voted} url={props.url}/>
             <a className={cls.bookItemDownload} href={props.link} download><span>Скачать</span></a>
           </div>
         </div>

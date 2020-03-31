@@ -1,7 +1,7 @@
 # react-books
 Собственный проект на react
 
-Backend - firebase
+Backend - firebase (база данных: получение и отправка)
 
 Версия для продакшена в папке docs (для gh-pages)
 
